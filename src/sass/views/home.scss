@@ -1,0 +1,128 @@
+#home,#result {
+    .init- {
+        &form {
+            font-size: 10px;
+        }
+        &input {
+            border-style: none;
+            background: transparent;
+            outline: none;
+            font-size: 1.2rem;
+            line-height: 2.4rem;
+            vertical-align: middle;
+            flex-grow: 1;
+            color: darken($primary-color, 10%);
+            line-height: 2.4rem;
+            width: 100%;
+            vertical-align: middle;
+            &::-webkit-input-placeholder {
+              color: $input-text-inactive;
+            }
+        }
+        &container-input {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 2px;
+            padding: 1rem 1.5rem 1rem;
+            background: $input-background;
+            box-shadow: 2px 2px 15px 0px #e2e2e2;
+    
+            border: 1px solid $input-text-border;
+    
+            & img {
+                opacity: 0.4;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+    
+            & button {
+                font-size: 2.4rem;
+                line-height: 2.4rem;
+                vertical-align: middle;
+                padding: 0;
+                background: none;
+                border: none;
+                outline: none;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0.9px;
+                right: 0px;
+                bottom: 0px;
+                z-index: 999;
+                height: 2px;
+                border-bottom-left-radius: 2px;
+                border-bottom-right-radius: 2px;
+                background: linear-gradient(to right, $input-transition-color-1, $input-transition-color-2, $input-transition-color-3, $input-transition-color-4, $input-transition-color-1);
+                background-position: 0% 0%;
+                background-size: 500% auto;
+                animation: gradient 10s linear infinite;
+            }
+        }
+
+        &error {
+            &:after {
+                background: linear-gradient(to right, $input-error-color-1, $input-error-color-2, $input-error-color-3, $input-error-color-4, #e2e2e2) !important;
+                background-position: 0% 0% !important;
+                background-size: 500% auto  !important;
+                animation: gradient 10s linear infinite;
+            }
+
+            &.animation {
+                animation: shakeX;
+                animation-duration: 0.7s;
+            }
+        }
+    }
+
+    .title {
+        font-size: 3em;
+        color: $text-color;
+        text-align: center;
+
+        & .first {
+            font-family: 'Montserrat Light';
+        }
+
+        & .second {
+            color: $text-second-color !important;
+            font-family: 'Montserrat Regular'
+        }
+    }
+
+    .subtitle {
+        color: $text-color;
+        text-align: center;
+        margin: 2em 0;
+
+        & a {
+            color: $primary-color;
+            margin: 1em 0;
+            border: 1px solid $primary-color;
+            border-radius: 0.5em;
+            padding: 0.5em 1em;
+            @extend %all-transition;
+            @extend %z-depth-lighten;
+            &:hover {
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+    }
+
+    .error-container {
+        min-height: 20px;
+        & .form-error {
+            color: $error-color;
+        }
+    }
+}

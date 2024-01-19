@@ -1,0 +1,115 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url(../assets/fonts/Montserrat/static/Montserrat-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url(../assets/fonts/Montserrat/static/Montserrat-Regular.ttf) format('truetype');
+}
+
+/* General tags and Ids */
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $main-bg-color;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    padding: 1.5em 0;
+    text-align: center;
+    position: fixed;
+    background-color: #f3f4f869;
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    border-bottom: 1px solid lighten(grey, 40%);
+
+    .title {
+        font-size: 1.5em;
+        color: $text-color;
+        text-align: center;
+
+        & .first {
+            font-family: 'Montserrat Light';
+        }
+
+        & .second {
+            color: $text-second-color !important;
+            font-family: 'Montserrat Regular'
+        }
+    }
+}
+
+/* General classes */
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+.btn {
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.hide {
+    display: none !important;
+
+}
+
+/* Utils */
+
+@for $i from 1 through 12 {
+    .separate-height-#{$i} {
+        margin-top: #{calc($i / 2) + 'rem'} !important;
+        margin-bottom: #{calc($i / 2) + 'rem'} !important;
+    }
+  }
+
+@for $i from 1 through 12 {
+    .separate-width-#{$i} {
+        margin-right: #{calc($i / 2) + 'rem'} 0 !important;
+        margin-left: #{calc($i / 2) + 'rem'} 0 !important;
+    }
+}
+
+@for $i from 1 through 100 {
+    .height-vh-#{$i} {
+        min-height: #{$i}vh !important;
+    }
+}

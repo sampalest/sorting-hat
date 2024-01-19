@@ -1,0 +1,31 @@
+/* General */
+
+$main-bg-color: #f3f4f8;
+$primary-color: #139b16;
+$secondary-color: #42210b;
+$error-color: #9e0c0c;
+$text-color: #42210b;
+$text-second-color: $primary-color;
+
+/* Init Input */
+
+$input-background: #fcfcfc;
+$input-text-inactive: #7881A1;
+$input-text-active: #BFD2FF;
+
+$input-text-border: #dcdcdc;
+$input-text-color: #036e05;
+
+$input-transition-color-1: $primary-color;
+$input-transition-color-2: #a1e657;
+$input-transition-color-3: #FEFFB8;
+$input-transition-color-4: #57e66f;
+
+$input-error-color-1: lighten($error-color, 20%);
+$input-error-color-2: lighten($error-color, 10%);
+$input-error-color-3: $error-color;
+$input-error-color-4: darken($error-color, 10%);
+$input-error-color-5: darken($error-color, 20%);
+
+
+/* Transition */

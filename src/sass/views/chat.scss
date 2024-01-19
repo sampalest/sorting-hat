@@ -1,0 +1,42 @@
+$bubble-border-radius: 1.5em;
+$bubble-margin: 1em;
+
+.chat-window {
+    margin: 6.5em 1em;
+
+    & .bubble-content {
+        padding: 1em;
+        background-color: white;
+        border-radius: $bubble-border-radius;
+        margin-bottom: calc($bubble-margin/2);
+        @extend %z-depth-lighten;
+
+        &.green {
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            margin-bottom: $bubble-margin;
+        }
+    }
+
+    & .bubble-answers {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-top: calc($bubble-margin/2);
+        
+        & button {
+            color: $primary-color;
+            border-color: $primary-color;
+            border-radius: 1rem;
+            background-color: white;
+            padding: 0.8em 2em !important;
+            min-width: 90%;
+
+            &:hover {
+                border-color: $secondary-color;
+                color: $secondary-color;
+                @extend %all-transition;
+            }
+        }
+    } 
+}

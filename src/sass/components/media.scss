@@ -1,0 +1,26 @@
+@include media-breakpoint-down(sm) {
+    .init-container-input {
+        max-width: 300px !important;
+    }
+
+    #home,#result {
+        .title {
+            font-size: 2em !important;
+        }
+    }
+
+    .chat-window {
+        font-size: 90% !important;
+    }
+}
+@include media-breakpoint-down(md) {
+    .init-container-input {
+        max-width: 300px !important;
+    }
+}
+
+@include media-breakpoint-only(xs) {
+    .init-container-input {
+        max-width: 250px !important;
+    }
+}

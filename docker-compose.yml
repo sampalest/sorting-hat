@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  sorting_hat:
+    container_name: sorting_hat
+    build:
+      context: .
+      dockerfile: deployment/Dockerfile
+    ports:
+      - 80:8080

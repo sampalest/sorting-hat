@@ -1,24 +1,22 @@
-# sorting-hat
+# Sorting-hat
 
-## Project setup
-```
-yarn install
-```
+<img src="public/sorting-hat-icon.svg" width="250"></img>
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Description
 
-### Compiles and minifies for production
-```
-yarn build
-```
+Welcome to the Sorting Hat, a fascinating chat-based game that delves into the magical world of house sorting. The Sorting Hat, with its mystical wisdom, will unveil the house that aligns with your character and traits.
 
-### Lints and fixes files
-```
-yarn lint
-```
+## How to play
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Ensure you have Docker installed on your system.
+2. Open your terminal and execute the following command to set up the Sorting Hat server:
+```shell
+docker compose up -d
+```
+3. Launch your browser and visit `http://localhost` to play the game.
+
+## Contribute
+Read this [document](docs/CONTRIBUTING.md)
+
+## Author
+Samuel Palomo Esteban

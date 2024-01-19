@@ -1,0 +1,86 @@
+/* Functions */
+
+%filter-transition {
+    transition: 0.3s filter linear;
+    -webkit-transition: 0.3s -webkit-filter linear;
+    -moz-transition: 0.3s -moz-filter linear;
+    -ms-transition: 0.3s -ms-filter linear;
+    -o-transition: 0.3s -o-filter linear;
+}
+
+%all-transition {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+%all-transition-02 {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+%msg-shadow {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
+}
+
+%z-depth-lighten {
+    box-shadow: 0 16px 24px 2px rgba(241, 241, 241, 0.1), 0 6px 30px 5px rgba(150, 112, 112, 0.12),
+    0 8px 10px -7px rgba(84, 84, 84, 0.2);
+}
+
+%z-depth-lighten-2 {
+    box-shadow: 0 16px 24px 2px rgba(245, 245, 245, 0.1), 0 6px 30px 5px rgba(196, 196, 196, 0.12),
+    0 8px 10px -7px rgba(148, 148, 148, 0.2);
+}
+
+%slider-shadow {
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+@mixin box-shadow-function($color, $px) {
+    -webkit-box-shadow: 1px 5px $px 0px $color;
+    -moz-box-shadow: 1px 5px $px 0px $color;
+    box-shadow: 1px 5px $px 0px $color;
+}
+
+@mixin drop-shadow($hor, $ver, $blur, $color) {
+    filter: drop-shadow($hor $ver $blur $color);
+    -webkit-filter: drop-shadow($hor $ver $blur $color);
+}
+
+@mixin footer-shadow() {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(168, 168, 168, 1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(168, 168, 168, 1);
+    box-shadow: 0px 0px 15px 0px rgba(168, 168, 168, 1);
+}
+
+@mixin color-shadow($color) {
+    -webkit-box-shadow: 0px 0px 15px 0px $color;
+    -moz-box-shadow: 0px 0px 15px 0px $color;
+    box-shadow: 0px 0px 15px 0px $color;
+}
+
+@mixin shadow-button($px, $opacity) {
+    -webkit-box-shadow: 1px 2px $px 0px rgba(50, 50, 50, $opacity);
+    -moz-box-shadow: 1px 2px $px 0px rgba(50, 50, 50, $opacity);
+    box-shadow: 1px 2px $px 0px rgba(50, 50, 50, $opacity);
+}
+
+@mixin transition($time) {
+    -webkit-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in-out;
+    -o-transition: all $time ease-in-out;
+    transition: all $time ease-in-out;
+}
+
+/* Animation */
+
+@keyframes gradient { 
+    0%{background-position:0 0}
+    100%{background-position:100% 0}
+}
